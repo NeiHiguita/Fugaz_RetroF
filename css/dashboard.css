@@ -1,0 +1,629 @@
+/* Estilos específicos para el dashboard */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+/* Estilos para el menú lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #874e4c;
+    color: #000;
+    padding: 20px;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 80%;
+    padding: 5px;
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    cursor: pointer;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu > li {
+    margin-bottom: 10px;
+}
+
+.menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #bba39b;
+}
+
+.submenu {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+.logo h2 {
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 50px;
+    /* Otros estilos que desees aplicar */
+}
+
+/* Estilos para la barra superior */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 290px; /* Ancho de la barra lateral */
+    right: 0;
+    height: 60px;
+    background-color: #eabcac;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+
+.dashboard-link {
+  text-decoration: none;
+  color: #000; /* Color del texto para el enlace */
+  /* Otros estilos que desees aplicar */
+}
+
+
+.topbar .search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.topbar .search-bar input {
+    width: 200px;
+    padding: 8px;
+    margin-right: 10px;
+}
+
+.topbar .search-bar button {
+    padding: 8px 16px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilos para el perfil */
+.profile {
+    position: relative;
+}
+.profile .rounded-circle i {
+    font-size: 28px; /* Tamaño del icono */
+}
+
+/* Estilos para el círculo del perfil */
+.rounded-circle {
+    border-radius: 50%;
+    cursor: pointer; /* Hace que el cursor cambie a una mano al pasar sobre el círculo */
+}
+
+/* Estilos para el menú desplegable */
+.dropdown-menu {
+    position: absolute;
+    top: 50px; /* Ajusta la posición vertical del menú */
+    right: 0; /* Ajusta la posición horizontal del menú */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+
+#adm{
+    margin-left: -15% ;
+}
+.content {
+    margin-left: 600px; /* Ancho de la barra lateral */
+    padding: 50px;
+}
+
+.content1 {
+    margin-left: 300px; /* Ancho de la barra lateral */
+    padding: 50px;
+}
+
+.content2 {
+  margin-left: 500px; /* Ancho de la barra lateral */
+  padding: 50px;
+}
+.chart-container {
+    width: 45%;
+    margin-top: 20px;
+}
+.chart-container.canvas-bar {
+    float: left;
+    margin-left: -35%;
+}
+.chart-container.canvas-pie {
+    float: right;
+    margin-right: 13%;
+}
+.chart-container canvas {
+    margin-top: 10px;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    margin-left: -45%;
+}
+
+.info-box {
+    width: 40%;
+    margin: 20px ;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.green-box {
+    background-color: #4CAF50;
+}
+
+.blue-box {
+    background-color: #2196F3;
+}
+
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-icon {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#categoryForm {
+    margin-bottom: 20px;
+}
+
+#categoriesTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Estilos para el switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Estilos adicionales para el switch */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  
+
+/* Para aplicar un borde negro a la tabla */
+#Table {
+    width: 1000px;
+    border: 2px solid black;
+    border-collapse: collapse; /* Para que los bordes de las celdas colapsen */
+  }
+  
+  /* Para aplicar un borde a las celdas */
+#Table td, #Table th {
+    border: 1px solid black;
+    padding: 8px; /* Añade espacio entre el contenido y el borde */
+}
+
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 50%;
+    max-width: 350px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+/* Estilos para el botón de guardar en la ventana modal categoria*/
+#modalCompra button {
+    padding: 8px 16px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px; 
+  }
+  
+  #modalCompra button:hover {
+    background-color: #0056b3;
+  }
+  
+  #modalCompra .modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  /* Estilos para el botón de cerrar */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+/* Estilos para el botón de guardar en la ventana modal insumo*/
+#modal button {
+    padding: 8px 16px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px; 
+  }
+  
+  #modal button:hover {
+    background-color: #0056b3;
+  }
+  
+  #modal .modal-content1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-content1 {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  /* Estilos para el botón de cerrar */
+  .close1 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close1:hover,
+  .close1:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+
+/*Agregar compra*/
+.modal1 {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 60%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+#modal1 button {
+    padding: 8px 16px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px; 
+  }
+  
+  #modal1 button:hover {
+    background-color: #0056b3;
+  }
+  
+  #modal1 .modal-content2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-content2 {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  /* Estilos para el botón de cerrar */
+  .close2 {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close2:hover,
+  .close2:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+  /*Agregar usuario*/
+.modalU {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 60%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+#modalU button {
+  padding: 8px 16px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px; 
+}
+
+#modalU button:hover {
+  background-color: #0056b3;
+}
+
+#modalU .modal-contentU {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modalU-contentU {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Estilos para el botón de cerrar */
+.closeU {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closeU:hover,
+.closeU:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*Modal clientes
+*/
+
+
+
+
+
+
+
+#categoriesTable th {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para los botones */
+button {
+    padding: 10px 16px;
+    margin: 4px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Estilos específicos para cada botón */
+button.agregar {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    background-color: green;
+    color: white;
+}
+
+button.editar {
+    margin-right: auto;
+    background-color: blue;
+    color: white;
+}
+td:nth-child(3) {
+  text-align: center;
+}
+
+
+button.eliminar {
+    margin-right: auto;
+    background-color: red;
+    color: white;
+}
+
+/* Estilos para el botón de generar reporte */
+.report-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #337ab7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+  
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
